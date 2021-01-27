@@ -3,7 +3,7 @@ const db = require('../../database/dbConfig')
 module.exports = {find, findBy, add, findById}
 
 function find() {
-    return db('users')
+    return db('users').select('id','username', 'department')
 }
 
 function findBy(filter) {
